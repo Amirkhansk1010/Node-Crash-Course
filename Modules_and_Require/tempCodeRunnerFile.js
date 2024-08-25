@@ -1,0 +1,2 @@
+sole.log(person);
+// conso

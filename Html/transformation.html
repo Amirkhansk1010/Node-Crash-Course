@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform in CSS</title>
+    <style>
+        .container {
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            margin: 50px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #scale{
+            margin-left: 600px;
+            background-color: beige;
+        }
+
+        #skew {
+            margin: 0px 0px 0px 350px;
+            background-color: blueviolet;
+        }
+
+        #rotate:hover {
+            background-image: conic-gradient(violet 10%, indigo 30%,blue 44%,green 50%,yellow 65%,orange 80%,red 5%);
+            transform: rotate(60deg);
+            border-radius: 50%;
+        }
+
+        #scale:active {
+            background-image: radial-gradient(circle,red,yellow,blue);
+            transform: scale(2);
+            border: 5px dashed yellow;
+        }
+
+        #translate:hover {
+            border: 5px dotted yellowgreen;
+            background-image: linear-gradient(to right,orange,white,green);
+            transform: translatex(1050px);
+        }
+
+        #skew:active {
+            border: 5px solid green;
+            background-color: salmon;
+            transform: skew(30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="rotate">Rotate</div>
+    <div class="container" id="scale">Scale</div>
+    <div class="container" id="translate">Translate</div>
+    <div class="container" id="skew">skew</div>
+    <a href="./transition_css.html" alt="transition page">Go to transition page</a>
+    <a href="./html1.html" alt="home page">Go to home page</a>
+</body>
+</html>

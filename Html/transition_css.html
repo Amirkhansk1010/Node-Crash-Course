@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .border {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+       
+        .container {
+            height: 100vh;
+            width: 100vw;
+            border: 2px dashed darkred;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #box-1 {
+            background-color: red;
+            transition-property: all;      /*transition property: defines the change of one state to another by means of some property like: font-size,background-color,color,border etc..*/
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 1s;
+        }
+        #box-1:hover {
+            color: green;
+            background-color: black;
+            font-size: 2.5rem;
+            border-radius: 50%;
+        }
+
+        #box-2 {
+            background-color: blue;
+            transition-property: all;
+            transition: 1.5s;
+            transition-timing-function: ease-in;    /*ease-in: slow to fast*/
+            transition-delay: 1s;
+        }
+        #box-2:hover {
+            font-size: 2rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: antiquewhite;
+            border-radius: 25%;
+            color: black;
+        }
+
+        #box-3 {
+            background-color: yellow;
+            transition-property: all;
+            transition: 1.5s;
+            transition-timing-function: ease-out;           /*ease-out: fast to slow*/
+            transition-delay: 1s;
+        }
+        #box-3:hover {
+            font-size: 3rem;
+            background-color: blueviolet;
+            color: red;
+            width: 500px;
+        }
+
+        #box-4 {
+            background-color: burlywood;
+            transition-property: all;
+            transition-duration: 2s;
+            transition-timing-function: steps(5);
+            transition-delay: 1s;
+        }
+        #box-4:hover {
+            font-size: 3.5rem;
+            background-color: magenta;
+            color: grey;
+            height: 150px;
+            width: 150px;
+        }
+
+        #box-5  {
+            background-color: paleturquoise;
+            transition: all 2s step-end 0.5s;
+        }
+        #box-5:hover {
+            background-color: white;
+            font-size: 2rem;
+            color: black;
+        }
+
+        .step {
+            height: 200px;
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 2s step-start 0.5s;
+        }
+        .step:hover {
+            background-color: mediumslateblue;
+            border: 2px solid orange;
+            border-radius: 50%;
+            font-size: 2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 700;
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Play with Transition</h2>
+    <div class="container">
+        <div class="border" id="box-1">Linear</div>
+        <div class="border" id="box-2">ease-in</div>
+        <div class="border" id="box-3">ease-out</div>
+        <div class="border" id="box-4">steps</div>
+        <div class="border" id="box-5">
+            <div class="step">
+                step-start
+            </div>
+        </div>
+    </div> 
+    <div>
+        <a href="./html1.html" alt="home page">Go to home page</a>
+        <a href="./transformation.html" alt="transformation page">Go to transformation page</a>
+    </div> 
+</body>
+</html>
